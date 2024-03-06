@@ -485,9 +485,10 @@
           <form class="subscribe-form">
             <label class="subscribe-label">
               <input
-                class="subscribe-input"
+                name="email"
                 type="email"
                 placeholder="E-mail"
+                class="subscribe-input"
               />
             </label>
             <button type="submit" class="subscribe-btn">
@@ -513,51 +514,75 @@
         <p class="modal-title">Leave your contacts and we will call you back</p>
         <form class="modal-form">
           <div class="input-wrapper">
-            <label class="input-label"> Name</label>
-            <input type="text" class="input-field" name="username" autofocus />
-            <svg class="input-icon" width="12" height="12">
-              <use href="./images/icons.svg#icon-man"></use>
-            </svg>
+            <label class="input-label" for="user-name"> Name</label>
+            <div class="icon-wrapper">
+              <input
+                id="user-name"
+                name="username"
+                type="text"
+                class="input-field"
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-man"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="input-wrapper">
-            <label class="input-label"> Phone</label>
-            <input type="tel" class="input-field" name="phone" />
-            <svg class="input-icon" width="13" height="13">
-              <use href="./images/icons.svg#icon-phone"></use>
-            </svg>
+            <label class="input-label" for="user-phone"> Phone</label>
+            <div class="icon-wrapper">
+              <input
+                id="user-phone"
+                name="phone"
+                type="tel"
+                class="input-field"
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="input-wrapper">
-            <label class="input-label"> Email</label>
-            <input type="email" class="input-field" name="email" />
-            <svg class="input-icon" width="15" height="12">
-              <use href="./images/icons.svg#icon-mail"></use>
-            </svg>
+            <label class="input-label" for="user-email"> Email</label>
+            <div class="icon-wrapper">
+              <input
+                id="user-email"
+                name="email"
+                type="email"
+                class="input-field"
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-mail"></use>
+              </svg>
+            </div>
           </div>
 
-          <div class="input-wrapper">
-            <label class="input-label"> Comment</label>
+          <div class="textarea-wrapper">
+            <label class="input-label" for="user-comment"> Comment</label>
             <textarea
-              class="textarea-field"
-              name="feedback"
+              id="user-comment"
+              name="user-comment"
               placeholder="Text input"
+              class="textarea-field"
             ></textarea>
           </div>
           <div class="modal-checkbox">
-            <span class="checkbox-icon-wrapper"
-              ><svg class="checkbox-icon" width="16" height="16">
-                <use href="./images/icons.svg#icon-checkmark"></use>
-              </svg>
-            </span>
             <input
+              id="user-privacy"
               type="checkbox"
-              class="checkbox-input"
+              value="true"
               name="user-privacy"
-              id="accept-terms"
+              class="visually-hidden"
             />
-            <label class="checkbox-label" for="accept-terms"
-              >I accept the terms and conditions of the
+            <label class="checkbox-label" for="user-privacy">
+              <span class="checkbox-icon-wrapper"
+                ><svg class="checkbox-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-checkmark"></use>
+                </svg>
+              </span>
+
+              I accept the terms and conditions of the
               <a class="checkbox-link" href="">Privacy-Policy</a>
             </label>
           </div>
